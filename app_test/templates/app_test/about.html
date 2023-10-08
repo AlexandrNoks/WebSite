@@ -1,0 +1,10 @@
+{% extends 'app_test/base.html' %}
+{% load static %}
+{% load test_tags %}
+{% block content %}
+<h1>О НАС</h1>
+<div class="text">
+    <p>{{ text|linebreaks }}</p>
+</div>
+{% endblock %}
+

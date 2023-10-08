@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app_test/css/style.css' %}">
+    <title>{{ title }}</title>
+</head>
+{% block up-footer %}
+<body background="{% static 'app_test/css/img/background.jpg' %}">
+    <a href="{% url 'index' %}" class="logo"><img src="{% static 'app_test/css/img/logo.png' %}"></a>
+    <div class="navigator">
+    {% for menu in main_menu %}
+        <a href="{% url menu.url_name %}">{{ menu.title }}</a>
+    {% endfor %}
+        <a href="#"><img src="{% static 'app_test/css/img/TG.png' %}" style="width:50px;height:50px;"></a>
+        <a href="#"><img src="{% static 'app_test/css/img/VK.png' %}" style="width:50px;height:50px;"></a>
+        <a href="#"><img src="{% static 'app_test/css/img/WA.png' %}" style="width:50px;height:50px;"></a>
+    </div>
+{% endblock %}
+{% block content %}
+{% endblock %}
+</body>
+</html>

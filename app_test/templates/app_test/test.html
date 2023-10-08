@@ -1,0 +1,13 @@
+{% extends 'app_test/base.html' %}
+{% block content %}
+<span class="form-answer">
+    <h1>Форма Тест связи</h1>
+</span>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <p>{{ test.as_p }}</p>
+        <button type="submit" class="to-send" style="width:60px;height:20px"><a href="{{ test.get_absolute_url }}"></a>Отправить</button>
+    </div>
+</form>
+{% endblock %}

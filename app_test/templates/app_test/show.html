@@ -1,0 +1,12 @@
+{% extends 'app_test/base.html' %}
+{% block content %}
+<div>
+{% for dir in directions %}
+    {% if direction == dir.name_direction %}
+    <h1>НАПРАВЛЕНИЕ: {{ dir.name_direction }}</h1>
+    <p>{{ dir.price_one_day }}</p>
+    <p>{{ dir.price_ticket }}</p>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

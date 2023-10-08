@@ -1,0 +1,24 @@
+button_to_send = document.querySelector('.to_send_data')
+answer_text = document.querySelector('answer')
+my_form = document.getElementById('sing-up')
+
+
+
+//function Answer_Enter() {
+//    let but_enter = document.querySelector('.to-send')
+//    but_enter.onClick = setTimeout(3000,my_form.style.display = 'none');
+//}
+//
+//function Close_Form() {
+//    form = document.querySelector('.form')
+//    button_close = document.querySelector('.close_form')
+//    button_close.onClick = setTimeout(3000,form.style.display = 'none');
+//}
+//
+//function To_Send_Data() {
+//    to_send = document.querySelector('.form')
+//    button_to_send.onClick = setTimeout(3000,to_send.style.display = 'none');
+//}
+
+
+

@@ -1,0 +1,7 @@
+{% for navigator in navigator_links %}
+    {% if navigator.index == nav_selected %}
+        <p>{{ navigator.title }}</p>
+    {% else %}
+        <a href="{% url navigator.url_name %}">{{ navigator.title }}</a>
+    {% endif %}
+{% endfor %}

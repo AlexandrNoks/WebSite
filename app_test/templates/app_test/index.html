@@ -1,0 +1,13 @@
+{% extends 'app_test/base.html' %}
+{% load static %}
+{% block content %}
+<h1>НАШИ НАПРАВЛЕНИЯ</h1>
+    <dir class="direction">
+    {% for direction in directions %}
+        <a href="{{ direction.get_absolute_url }}">{{ direction.name_direction }}</a>
+    {% endfor %}
+    </dir>
+{% endblock %}
+
+
+

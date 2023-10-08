@@ -1,0 +1,13 @@
+{% extends 'app_test/base.html' %}
+{% block content %}
+<span class="form-answer">
+    <h1>Форма обратной связи</h1>
+</span>
+<form method="post">
+    {% csrf_token %}
+        <div>
+            <p>{{ form.as_p }}</p>
+            <button type="submit" class="to-send" style="width:60px;height:20px">Отправить</button>
+        </div>
+</form>
+{% endblock %}
