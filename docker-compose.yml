@@ -1,0 +1,16 @@
+version: "3.11"
+
+
+services:
+  website:
+    container_name: mywebsite
+    restart: always
+    build:
+      dockerfile: Dockerfile
+    command: "python manage.py runserver"
+    ports:
+      - "8000"
+
+
+
+

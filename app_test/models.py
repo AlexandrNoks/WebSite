@@ -87,6 +87,22 @@ class MyForm(models.Model):
         verbose_name_plural = "Обратная связь"
         ordering = ["id"]
 
+class RecordForLesson(models.Model):
+    user_id = models.IntegerField()
+    user_name = models.CharField(max_length=1000)
+    direction = models.CharField(max_length=1000)
+    weekday = models.CharField(max_length=1000)
+    time_lesson = models.DateTimeField()
+    your_phone = models.CharField(max_length=1000)
+
+    def __str__(self):
+        return f"{self.user_name}"
+
+    class Meta:
+        verbose_name = "Обратная связь"
+        verbose_name_plural = "Обратная связь"
+        ordering = ["id"]
+
 # class Pupils(models.Model):
 #     name_parents = models.CharField(max_length=1000, verbose_name="Имя родителя: ")
 #     name_children = models.CharField(max_length=1000, verbose_name="Имя ребенка: ")
@@ -107,7 +123,7 @@ class Presentation(models.Model):
     name_presentation = models.CharField(max_length=100, verbose_name="Выступления")
     text = models.CharField(max_length=10000, blank=False, verbose_name="Описание")
     link = models.URLField(max_length=100, verbose_name="Ссылка")
-    photo = models.ImageField(upload_to="app_test/photo/", verbose_name="Фото")
+    # photo = models.ImageField(upload_to="Website/app_test/photo/", verbose_name="Фото")
     date_publication = models.DateTimeField(auto_now_add=True, verbose_name="Дата мероприятия")
     direction = models.ForeignKey(Directions, on_delete=models.CASCADE, blank=True)
 

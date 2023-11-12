@@ -1,9 +1,11 @@
-from django import template
-from app_test.models import *
-
-register = template.Library()
-
-
+# from django import template
+# from django.db import models
+#
+# from Websiite.app_test.models import Directions
+#
+# register = template.Library()
+#
+#
 # @register.simple_tag()
 # def show_navigators():
 #     navigators = [
@@ -13,9 +15,9 @@ register = template.Library()
 #         {"title": "ОБРАТНАЯ СВЯЗЬ", "url_name": 'form', 'index': 4}
 #     ]
 #     return navigators
-
-
-@register.simple_tag()
-def show_directions():
-    directions = Directions.objects.all()
-    return directions
+#
+#
+# @register.simple_tag()
+# def show_directions():
+#     directions = Directions.objects.all()
+#     return directions

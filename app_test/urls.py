@@ -2,7 +2,7 @@ from django.urls import path, re_path
 from django.contrib import admin
 from django.conf.urls.static import static
 from .views import *
-from test_project import settings
+# from Websiite.test_project import settings
 
 
 urlpatterns = [
